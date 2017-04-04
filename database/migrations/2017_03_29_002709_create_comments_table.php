@@ -15,7 +15,8 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             //chave estrangeira
-            $table->increments('post_id')->unsigned(); 
+            $table->increments('id');
+            $table->integer('post_id')->unsigned(); 
             //o post_id faz referencia ao 'id' da tabela 'posts'
             $table->foreign('post_id')->references('id')->on('posts'); 
             $table->string('name');

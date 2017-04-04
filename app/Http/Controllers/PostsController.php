@@ -4,6 +4,7 @@ namespace App\Http\Controllers; //teste
 
 use Illuminate\Http\Request;
 use \App\Post;
+use \App\Comment;
 
 class PostsController extends Controller
 {

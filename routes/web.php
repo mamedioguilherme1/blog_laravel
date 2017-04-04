@@ -18,12 +18,16 @@ Route::get('/', function () {
 Route::get('/posts', 'PostsController@index'); // feito
 Route::get('/posts/create', 'PostsController@create'); //feito
 Route::post('/posts', 'PostsController@store'); //feito
+Route::post('/comments', 'CommentsController@store'); //feito
+Route::delete('/comments/{id}', 'CommentsController@destroy'); //feito
 
 Route::get('/posts/{id}/edit', 'PostsController@edit'); //feito
 Route::put('posts/{id}', 'PostsController@update'); //feito
 Route::delete('posts/{id}', 'PostsController@destroy'); //feito
 
 Route::get('/posts/{id}', 'PostsController@show'); //feito
+
+
 
 
 

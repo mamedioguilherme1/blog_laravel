@@ -24,10 +24,18 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(App\Post::class, function (Faker\Generator $faker) {
-    static $password;
 
     return [
         'title' => $faker-> words(3, true),
         'content' => $faker->sentences(5, true),
+    ];
+});
+
+$factory->define(App\Comment::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker-> name,
+        'comment' => $faker->sentences(5, true),
+        'post_id' => \App\Post::all()->random()->id,
     ];
 });
