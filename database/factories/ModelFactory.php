@@ -39,3 +39,12 @@ $factory->define(App\Comment::class, function (Faker\Generator $faker) {
         'post_id' => \App\Post::all()->random()->id,
     ];
 });
+
+$factory->define(App\Reply::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker-> name,
+        'reply' => $faker->sentences(5, true),
+        'comment_id' => \App\Comment::all()->random()->id,
+    ];
+});

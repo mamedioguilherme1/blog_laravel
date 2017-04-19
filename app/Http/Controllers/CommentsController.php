@@ -10,12 +10,12 @@ class CommentsController extends Controller
     public function store(Request  $request)
     {
         Comment::create($request->all());
-        return redirect('posts/' . $request->post_id);
+        return redirect('posts/' . $request->post_id. '/detalhes');
     }
 
     public function destroy(Request $request, $id)
     {
-        Comment::find($id)->delete();
+        Comment::destroy($id);
         return redirect('posts/' . $request->post_id);
     }
 

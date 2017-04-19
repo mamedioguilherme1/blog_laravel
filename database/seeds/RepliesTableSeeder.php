@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PostsTableSeeder extends Seeder
+class RepliesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,9 +11,9 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
-        \App\Post::truncate();
+        \App\Reply::truncate();
 
-        factory(\App\Post::class, 100)
-        	->create();
+        factory(\App\Reply::class, 90)
+        	->create();			
     }
 }
